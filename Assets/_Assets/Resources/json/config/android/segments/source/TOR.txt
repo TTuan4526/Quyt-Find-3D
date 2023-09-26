@@ -1,0 +1,76 @@
+{
+    "game":
+    {
+		// Secondary multiplier for the total time for each level (base is 1.0)
+        "levelTimeMultiplier2": 1.0,
+		
+        // Revive settings
+        "revive":
+        {
+            // Rewarded video times per day
+            "rewardedVideoMaxPerDay": 9999,
+
+            // Rewarded video times per level
+            "rewardedVideoMaxPerLevel": 3,
+
+			// Rewarded video minimum level
+            "rewardedVideoMinimumLevel": 0,
+			
+			// A percentage of the goal items remaining above which the user will be offered to watch a rewarded video in order to revive.
+			// NOTE: This applies even if the "rewardedVideoEnabled" flag is set to false.
+			// If set to 0.0 an RV is always shown (if enabled), if set to 100.0 it is never shown.
+			"rewardedVideoGoalsRemainingThreshold": 0.0
+        }
+	},
+	
+	"segmentation":
+	{
+		"source":
+		{
+			// Players who don't make any IAP until the defined level are moved to the CPI segment
+			//"nonPayerToCPILevel": 300
+		},
+		
+		"skill":
+		{			
+			// Duration threshold for group 5 (in seconds)
+			"durationThresholdGroup5": 270,
+			
+			// Duration threshold for group 4 (in seconds)
+			"durationThresholdGroup4": 550,
+			
+			// Duration threshold for group 3 (in seconds)
+			"durationThresholdGroup3": 750,
+			
+			// Duration threshold for group 2 (in seconds)
+			"durationThresholdGroup2": 800
+		}
+	},
+
+    "ads":
+    {   
+		"banners":
+        {
+            // Minimum level before which banners will not be shown
+            "minimumLevel": 3
+        },
+		
+		"interstitials":
+        {
+            // Minimum level before which interstitials will not be shown
+            "minimumLevel": 3
+		},
+		
+        "rewardedVideo":
+        {
+            // Does store rewarded video limit is enabled?
+            "limitRVStoreEnabled": true,
+
+            // Maximum times per a day that the user can watch rewarded video on store
+            "maximumRVStorePerDay": 10,
+
+            // Does store rewarded video is enabled?
+            "isRewardedStoreEnabled": true
+        }
+    }
+}

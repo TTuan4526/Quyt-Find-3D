@@ -1,0 +1,366 @@
+{
+    "tutorials":
+    [
+		{
+			"id": "basicGameplay",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialBasicGameplay",
+			"levelIndex": 1
+		},
+		
+		{
+			"id": "magnet",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialMagnet",
+			"levelConfigKey": "game.boosts.magnet.unlockLevel"
+		},
+		
+		{
+			"id": "hint",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialHint",
+			"levelConfigKey": "game.boosts.hint.unlockLevel"
+		},
+		
+		{
+			"id": "superHint",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialSuperHint",
+			"levelConfigKey": "game.boosts.superHint.unlockLevel"
+		},
+		
+		{
+			"id": "freezeTime",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialFreezeTime",
+			"levelConfigKey": "game.boosts.freezeTime.unlockLevel"
+		},
+		
+		{
+			"id": "shuffle",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialShuffle",
+			"levelConfigKey": "game.boosts.shuffle.unlockLevel"
+		},
+		
+		{
+			"id": "gem",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialGem",
+			"levelConfigKey": "gemChallenge.minimumLevel",
+			"gemsAllowed": true
+		},
+		
+		{
+			"id": "weekly",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialWeekly",
+			"levelConfigKey": "weeklyChallenge.minimumLevel"
+		},
+		
+		{
+			"id": "lightningBolt",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialLightningBolt",
+			"levelConfigKey": "game.elements.lightningBolt.unlockLevel",
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "lightningBolt"
+				}
+			]
+		},
+		
+		{
+			"id": "clock",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialClock",
+			"levelConfigKey": "game.elements.clock.unlockLevel",
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "clock"
+				}
+			]
+		},
+		
+		{
+			"id": "enlarger",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialEnlarger",
+			"levelIndex": 31,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "enlarger"
+				}
+			]
+		},
+		
+		{
+			"id": "smallChest",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialSmallChest",
+			"levelIndex": 91,
+			"injectConditions":
+			[
+				{
+					"type": "container",
+					"containerType": "smallChest"
+				}
+			]
+		},
+		
+		{
+			"id": "mysteryBox",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialMysteryBox",
+			"levelIndex": 131,
+			"injectConditions":
+			[
+				{ "type": "container", "containerType": "mysteryBox1" },
+				{ "type": "container", "containerType": "mysteryBox2" },
+				{ "type": "container", "containerType": "mysteryBox3" },
+				{ "type": "container", "containerType": "mysteryBox4" },
+				{ "type": "container", "containerType": "mysteryBox5" }
+			]
+		},
+		
+		{
+			"id": "fanCharger",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialFanCharger",
+			"levelIndex": 160,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "fanCharger"
+				}
+			]
+		},
+		
+		{
+			"id": "garbageBin",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialGarbageBin",
+			"levelConfigKey": "game.elements.garbageBin.unlockLevel",
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "garbageBin"
+				}
+			]
+		},
+		
+		
+		{
+			"id": "colorBomb",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialColorBomb",
+			"levelConfigKey": "game.elements.colorBomb.unlockLevel",
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "colorBomb"
+				}
+			]
+		},
+		
+		{
+			"id": "crate",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialCrate",
+			"levelIndex": 307,
+			"injectConditions":
+			[
+				{
+					"type": "container",
+					"containerType": "crate"
+				}
+			]
+		},		
+				
+		{
+			"id": "duplicator",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialDuplicator",
+			"levelIndex": 348,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "duplicator"
+				}
+			]
+		},
+		
+		{
+			"id": "shrinker",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialShrinker",
+			"levelIndex": 401,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "shrinker"
+				}
+			]
+		},
+		
+		{
+			"id": "largeChest",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialLargeChest",
+			"levelIndex": 503,
+			"injectConditions":
+			[
+				{
+					"type": "container",
+					"containerType": "largeChest"
+				}
+			]
+		},
+		
+		{
+			"id": "cage",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialCage",
+			"levelIndex": 601,
+			"injectConditions":
+			[
+				{
+					"type": "container",
+					"containerType": "cage"
+				}
+			]
+		},
+
+		{
+			"id": "eliminator",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialEliminator",
+			"levelIndex": 708,
+			"injectConditions":
+			[
+				{
+					"type": "modifier",
+					"modifierType": "eliminator"
+				}
+			]
+		},
+		
+		{
+			"id": "spammer",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialSpammer",
+			"levelIndex": 807,
+			"injectConditions":
+			[
+				{
+					"type": "modifier",
+					"modifierType": "spammer"
+				}
+			]
+		},
+   
+		{
+			"id": "meteorStrike",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialMeteorStrike",
+			"levelIndex": 909,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "meteor"
+				}
+			]
+		},
+		
+		{
+			"id": "pinata",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialPinata",
+			"levelIndex": 997,
+			"injectConditions":
+			"injectConditions":
+			[
+				{ "type": "container", "containerType": "pinata1" },
+				{ "type": "container", "containerType": "pinata2" },
+				{ "type": "container", "containerType": "pinata3" },
+				{ "type": "container", "containerType": "pinata4" },
+				{ "type": "container", "containerType": "pinata5" }
+			]
+		},
+		
+		{
+			"id": "dynamite",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialDynamite",
+			"levelIndex": 1112,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "detonator"
+				}
+			]
+		},
+		
+		{
+			"id": "laserBeam",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialLaserBeam",
+			"levelIndex": 1402,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "laser"
+				}
+			]
+		},
+		
+		{
+			"id": "cometShower",
+			"type": "inGame",
+			"prefab": "Prefabs/Tutorials/TutorialCometShower",
+			"levelIndex": 1614,
+			"injectConditions":
+			[
+				{
+					"type": "item",
+					"itemType": "cometShower"
+				}
+			]
+		},
+		
+		{
+			"id": "superLightning",
+			"type": "metagame",
+			"prefab": "Prefabs/Tutorials/TutorialSuperLightning",
+			"levelConfigKey": "game.preGameBoosts.superLightning.unlockLevel"
+		},
+		
+		{
+			"id": "chargedFan",
+			"type": "metagame",
+			"prefab": "Prefabs/Tutorials/TutorialChargedFan",
+			"levelConfigKey": "game.preGameBoosts.chargedFan.unlockLevel"
+		},
+		
+		{
+			"id": "extraTime",
+			"type": "metagame",
+			"prefab": "Prefabs/Tutorials/TutorialExtraTime",
+			"levelConfigKey": "game.preGameBoosts.extraTime.unlockLevel"
+		}
+	]
+}

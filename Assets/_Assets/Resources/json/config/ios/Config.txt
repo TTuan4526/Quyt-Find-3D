@@ -1,0 +1,1229 @@
+{
+    "general":
+    {
+        // Terms & Conditions URL
+        "termsAndConditionsURL": "https://www.boomboxgames.net/terms-of-service",
+
+        // Privacy policy URL
+        "privacyPolicyURL": "https://www.boomboxgames.net/privacy-policy",
+
+        // Support email address
+        "supportURL": "https://bit.ly/34EDgNQ"
+    },
+
+    "game":
+    {
+        // How many coins are awarded for watching a rewarded video via the "not enough coins" popup
+        "notEnoughCoinsVideoReward": 10,
+
+        // Multiplier of relative time remaining of score (base is 1.0)
+        "scoreTimeRemainingMultiplier": 1.0,
+		
+		// Multiplier applied to all reward values (base is 1.0)
+		"rewardMultiplier": 1.0,
+
+        // Multiplier for the total time for each level (base is 1.0)
+        "levelTimeMultiplier": 1.0,
+		
+		// Secondary multiplier for the total time for each level (base is 1.0). The second value is required for fine-grained segment control.
+        "levelTimeMultiplier2": 1.0,
+		
+		// Should the items' density be constant? If set to true, wider screens will have more non-goal items than narrow ones.
+		"constantItemDensity": true,
+		
+		// Multiplier applied to the number of goal items in each level (base is 1.0)
+		"goalItemsMultiplier": 1.0,
+		
+		// Multiplier applied to the number of board items in each level (base is 1.0)
+		"boardItemsMultiplier": 1.0,
+		
+		// Selected item's floating height factor (base is 1.0)
+		"selectedItemHeight": 1.0,
+		
+		// Items' scale factor (base is 1.0)
+		"itemScale": 1.0,
+		
+		// An offset applied to the ease threshold value that is defined for each level. The ease value determines after how many attempts
+		// in a level, the user is presented with an easier variant of the level.
+		// Increasing the offset value means it will take more attempts before easing, reducing it means fewer attempts before easing.
+		// The offset value can be negative.
+		"easeThresholdOffset": 0,
+		
+		// The minimum level number after which the ease threshold applies.
+		"easeThresholdMinimumLevel": 0,
+		
+		// FTUE: After completing this level, the user will be taken back to the Main Screen. Before this level,
+		// the levels will load one after the other without exiting the game screen.
+		// NOTE: This applies only to the first game session.
+		"exitToMainScreenLevel": 2,
+		
+		// Is 'are you sure' with crown animation is enabled?
+		"areYouSurePhase2Enabled": true,
+
+        // Revive settings
+        "revive":
+        {
+            // Revive prices in coins
+            "price": [100, 150, 200],
+
+            // Lightning reward amount
+            "lightningRewardAmount": [0, 1, 3],
+
+            // Time added when reviving by paying coins (in seconds)
+            "coinsTimeAdded": [60, 60, 60],
+
+            // Time added when reviving by watching a rewarded video (in seconds)
+            "rewardedVideoTimeAdded": 15,
+
+            // Rewarded video times per day
+            "rewardedVideoMaxPerDay": 9999,
+
+            // Rewarded video times per level
+            "rewardedVideoMaxPerLevel": 9999,
+
+            // Rewarded video minimum level
+            "rewardedVideoMinimumLevel": 999999,
+			
+			// A percentage of the goal items remaining above which the user will be offered to watch a rewarded video in order to revive.
+			// NOTE: This applies even if the "rewardedVideoEnabled" flag is set to false.
+			// If set to 0.0 an RV is always shown (if enabled), if set to 100.0 it is never shown.
+			"rewardedVideoGoalsRemainingThreshold": 100.0,
+			
+			// Time added when reviving by watching a rewarded video (in seconds). Applies only if the goals remaining threshold is met.
+            "rewardedVideoGoalsRemainingTimeAdded": 45
+        },
+
+        // Boosts settings
+        "boosts":
+        {
+			// Are boost highlights enabled?
+			"highlights": true,
+			
+			 // Magnet boost
+            "magnet":
+            {
+				// The level in which the magnet feature is unlocked
+				"unlockLevel": 9,
+				
+                // Magnet's price, in coins
+                "price": 100,
+
+                // The amount of boosters the user will receive after paying in coins
+                "packAmount": 3,
+				
+				// Boost highlight
+				"highlight":
+				{					
+					// The boost highlight's idle detection threshold (in seconds)
+					"idleThreshold": 10.0,
+					
+					// The boost highlight's repeat interval once triggered (in seconds)
+					"interval": 5.0,
+					
+					// The highlight will only be shown if the time remaining in the level is over this value (in seconds)
+					"remainingTimeThreshold": 30.0
+				}
+            },
+			
+            // Hint boost
+            "hint":
+            {
+				// The level in which the hint feature is unlocked
+				"unlockLevel": 5,
+				
+                // Hint's price, in coins
+                "price": 90,
+
+                // The amount of boosters the user will receive after paying in coins
+                "packAmount": 3,
+				
+				// Boost highlight
+				"highlight":
+				{
+					// The boost highlight's idle detection threshold (in seconds)
+					"idleThreshold": 10.0,
+					
+					// The boost highlight's repeat interval once triggered (in seconds)
+					"interval": 5.0,
+					
+					// The highlight will only be shown if the time remaining in the level is over this value (in seconds)
+					"remainingTimeThreshold": 30.0
+				}
+            },
+
+            // Super Hint boost
+            "superHint":
+            {
+				// The level in which the super hint feature is unlocked
+				"unlockLevel": 7,
+				
+                // Super Hint's price, in coins
+                "price": 120,
+
+                // Number of goal items from the current wave that are highlighted by the boost
+                "itemCount": 3,
+
+                // The amount of boosters the user will receive after paying in coins
+                "packAmount": 3,
+				
+				// Boost highlight
+				"highlight":
+				{					
+					// The boost highlight's idle detection threshold (in seconds)
+					"idleThreshold": 10.0,
+					
+					// The boost highlight's repeat interval once triggered (in seconds)
+					"interval": 5.0,
+					
+					// The highlight will only be shown if the time remaining in the level is over this value (in seconds)
+					"remainingTimeThreshold": 30.0
+				}
+            },
+			
+			// Freeze Time boost
+			"freezeTime":
+			{
+				// The level in which the freeze time feature is unlocked
+				"unlockLevel": 55,
+				
+				// Duration of the freeze effect (in seconds)
+				"duration": 10.0,
+				
+				// Freeze time's price, in coins
+				"price": 150,
+				
+				// The amount of boosters the user will receive after paying in coins
+				"packAmount": 3,
+				
+				// Boost highlight
+				"highlight":
+				{					
+					// The highlight will be triggered when the time remaining in the level is under this value (in seconds)
+					"remainingTimeThreshold": 30.0,
+					
+					// The boost highlight's repeat interval once triggered (in seconds)
+					"interval": 10.0					
+				}
+			},
+           
+            // Shuffle boost
+            "shuffle":
+            {
+				// The level in which the shuffle feature is unlocked
+				"unlockLevel": 3,
+				
+                // The time it takes for the shuffle to recharge (in seconds)
+                "rechargeTime": 30.0,
+				
+				// Items' shuffle launch speed factor (base is 1.0)
+				"launchSpeed": 1.0,
+				
+				// Items' shuffle launch sideways motion (base is 1.0)
+				"launchSidewaysFactor": 1.0
+            }
+        },
+
+
+		// Pre-game boosts
+        "preGameBoosts":
+        {
+			// Should the pre-game boosts selection be saved? If set to false, boosts become unselected each time the popup is shown.
+			"rememberSelection": true,
+			
+			// Super Lightning pre-game boost
+            "superLightning":
+            {
+				// The level in which the super lightning feature is unlocked
+                "unlockLevel": 10,
+				
+				// Price for a pack of super lightning boosts (in coins)
+                "price": 90,
+				
+				// Number of boosts per pack
+                "packAmount": 3,
+				
+				// The number of items removed when the super lightning boost is activated
+                "itemsToRemove": 10
+            },
+			
+			// Charged Fan pre-game boost
+            "chargedFan":
+            {
+				// The level in which the charged fan is unlocked
+                "unlockLevel": 15,
+				
+				// Price for a pack of charged fan boosts (in coins)
+                "price": 100,
+				
+				// Number of boosts per pack
+                "packAmount": 3
+            },
+			
+			// Extra Time pre-game boost
+            "extraTime":
+            {
+				// The level in which the extra time feature is unlocked
+                "unlockLevel": 14,
+				
+				// Price for a pack of extra time boosts (in coins)
+                "price": 120,
+				
+				// Number of boosts per pack
+                "packAmount": 3,
+				
+				// Time added to the level when the boost is activated (in seconds)
+                "timeAdded": 30.0
+            }			
+        },
+
+
+		// Collectible in-game special elements
+        "elements":
+        {
+			// Show the element card UI?
+			"showCards": true,
+			
+			// Collectible lightning bolt
+            "lightningBolt":
+            {
+				// The level in which the lightning bolt is unlocked.
+				// NOTE: The actual level must contain the element.
+                "unlockLevel": 16,
+				
+				// The number of items removed when a lightning bolt is collected
+                "itemsToRemove": 3
+            },
+			
+			// Clock item
+            "clock":
+            {
+				// The level in which the clock is unlocked.
+				// NOTE: The actual level must contain the element.
+                "unlockLevel": 21,
+				
+				// Time added to the level's duration when the clock is collected (in seconds)
+                "timeAdded": 10.0
+            },
+			
+			// Garbage bin
+            "garbageBin":
+            {
+				// The level in which the garbage bin is unlocked.
+				// NOTE: The actual level must contain the element.
+                "unlockLevel": 204,
+				
+				// Interval between garbage items' creation (in seconds)
+                "interval": 3.0
+            },
+			
+			// Color bomb
+            "colorBomb":
+            {
+				// The level in which the color bomb is unlocked.
+				// NOTE: The actual level must contain the element.
+                "unlockLevel": 255,
+				
+				// Bomb's short fuse duration (in seconds)
+                "shortDuration": 30.0,
+				
+				// Bomb's medium fuse duration (in seconds)
+                "mediumDuration": 60.0,
+				
+				// Bomb's long fuse duration (in seconds)
+                "longDuration": 90.0
+            }
+        },
+
+        // Rewards for completing a level
+        "levelCompleteRewards":
+        {
+            // Multiplier for level complete rewards for watching a rewarded video. If set to 0, user won't be offered to watch an RV.
+            "rewardedVideoMultiplier": 2,
+
+            "star1":
+            {
+                // Score required to get this reward (0-100)
+                "scoreThreshold": 0,
+
+                // Number of coins awarded
+                "coins": 3
+            },
+
+            "star2":
+            {
+                // Score required to get this reward (0-100)
+                "scoreThreshold": 30,
+
+                /// Number of coins awarded
+                "coins": 5
+            },
+
+            "star3":
+            {
+                // Score required to get this reward (0-100)
+                "scoreThreshold": 60,
+
+                // Number of coins awarded
+                "coins": 8
+            }
+        },
+		
+		// Low time warning
+		"lowTimeWarning":
+		{
+			// Is the feature enabled?
+            "enabled": true,
+			
+			// The warning is shown when the time remaining in the level reaches this value
+			"threshold": 30.0
+		},
+
+        "easeFirstLevelEachDay" :
+        {
+            // Is the feature enabled?
+            "enabled": false,
+
+            // minimum level to activate
+            "minimumLevel" : 10,
+
+            // active until the user win the first level today
+            "activeUntilWin" : false,
+
+            // multiplier for board items
+            "itemsMultiplier" : 0.5,
+
+            // multiplier for level duration
+            "timeMultiplier" : 2,
+
+            // extra value for level's assist [0-100]
+            "assistExtra" : 60
+        }
+    },
+
+    "chests":
+    {
+        // The amount of stars to get the star chest reward
+        "starsAmountObjective": 20,
+
+        // The amount of levels to get the level chest reward
+        "levelsAmountObjective": 10
+    },
+
+    "lives":
+    {
+        // Maximum number of lives a player get get by recharging over time
+        "rechargeCap": 5,
+
+        // Life regeneration duration - the time it takes to regain a single life point (in minutes)
+        "rechargeDuration": 30.0,
+
+        // Cost of refill lives
+        "refillCoinsCost": 100
+    },
+
+    "store":
+    {
+        // The amount of coins awarded for watching a rewarded video in the store
+        "rewardedVideoCoins": 10
+    },
+
+    "generalStoreSale":
+    {
+        // Is the feature enabled?
+        "enabled": true,
+
+        // End time using yyyy-MM-dd HH:mm format
+        "endTime": "2022-12-10 10:30",
+
+        // Adds XX% more coins to each store bundle
+        "percentMoreCoins": 38
+    },
+	
+	"tutorials":
+	{
+		// Are the in-game tutorials enabled?
+		"inGameEnabled": true,
+		
+		// Are the metagame tutorials enabled?
+		"metagameEnabled": true,
+		
+		// Is the tutorial injection system enabled? This shows players tutorials they have missed.
+		"injectionEnabled": true
+	},
+
+    "profile":
+    {
+        // Initial number of coins for a new player profile
+        "initialCoins": 100,
+
+        // Initial number of magnets for a new player profile
+        "initialMagnets": 3,
+
+        // Initial number of hints for a new player profile
+        "initialHints": 3,
+
+        // Initial number of super hints for a new player profile
+        "initialSuperHints": 3,
+		
+		// Initial number of freeze time boosts for a new player profile
+        "initialFreezeTime": 3,
+		
+		 // Initial number of charged fan pre-game boosts for a new player profile
+        "initialChargedFan": 3,
+		
+		 // Initial number of extra time pre-game boosts for a new player profile
+        "initialExtraTime": 3,
+		
+		 // Initial number of super lightning pre-game boosts for a new player profile
+        "initialSuperLightning": 3,		
+
+        // Initial number of lives for a new player profile
+        "initialLives": 5,
+		
+		// Initial number of vouchers (for 1 life each) for a new player profile
+		"initialLifeVouchers": 1
+    },
+
+    "ads":
+    {
+        "banners":
+        {
+            // Minimum level before which banners will not be shown
+            "minimumLevel": 200
+        },
+
+        "interstitials":
+        {
+            // Minimum interval between interstitials (in seconds)
+            "minimumInterval": 60,
+
+            // Minimum level before which interstitials will not be shown
+            "minimumLevel": 200,
+
+            // Default interstitial placement name (can be empty)
+            "defaultPlacement": "",
+
+            // Time threshold for the 'app resumed' interstitial shown when the app regains focus after being in the background (in seconds)
+            "appResumedThreshold": 60,
+
+            // Show interstitials after the player has lost the level?
+            "showAfterDefeat": true,
+
+            // Show interstitials after the player has chosen to quit the level?
+            "showAfterQuit": true,
+
+            // Show interstitials after the player has resume to the application?
+            "showOnAppResume": false,
+			
+			// Show interstitials before starting a new level (after pressing the "Play" button in the pre-game popup)?
+			"showBeforeLevel": false,
+
+            // Show interstitial before level complete popup appears?
+            "showBeforeLevelComplete" : false
+        },
+
+        "rewardedVideo":
+        {
+            // The grace period after watching an RV before an interstitial can be shown (in seconds)
+            "gracePeriod": 15.0,
+
+            // Minimum level before which rewarded video will not be shown
+            "minimumLevel": 0,
+
+            // Default RV placement name (can be empty)
+            "defaultPlacement": "",
+
+            // Does store rewarded video limit is enabled?
+            "limitRVStoreEnabled": true,
+
+            // Maximum times per a day that the user can watch rewarded video on store
+            "maximumRVStorePerDay": 10,
+
+            // Does store rewarded video is enabled?
+            "isRewardedStoreEnabled": false,
+
+            // Does get more lives rewarded video is enabled?
+            "isRewardedGetMoreLivesEnabled": false
+        }
+    },
+
+    "crossPromotion":
+    {
+        "banners":
+        {
+            // Are cross promotion banners enabled?
+            "enabled": false
+        },
+
+        "popups":
+        {
+            // Are cross promotion popups enabled?
+            "enabled": false,
+
+            // Minimum player level before which the popup will not be shown
+            "minimumLevel": 15,
+
+            // Show the popup every X victories
+            "victoryInterval": 6
+        }
+    },
+
+    "notifications":
+    {
+        // Earliest hour of day that the notification may be displayed (0-23)
+        "minHour": 10,
+
+        // Latest hour of day that the notification may be displayed (0-23)
+        "maxHour": 22,
+
+        // Number of magnets awarded for opening the 'Come Back' notification
+        "comeBackMagnetReward": 1,
+
+        // Number of super hints awarded for opening the 'Come Back' notification
+        "comeBackSuperHintReward": 1,
+
+        // Are basic local notifications enabled?
+        "basicEnabled": true,
+
+        // Are the motivational local notifications enabled?
+        "motivationalEnabled": true
+    },
+
+    "rating":
+    {
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// Minimum level for rating requests
+        "minimumLevel": 7,
+		
+        // Minimum number of levels won per session after which rating will be requested
+        "minimumVictories": 2,
+
+        // If the user rates the game (internally) with a score under this threshold, they will be asked for feedback instead
+        "feedbackThreshold": 5,
+
+		// Start Second rating X levels after the first rating
+        "levelsToSecondRating": 68,
+
+		// Maximum stars rated by user on the first time for second rating loop
+        "maximumStarsForSecondRating": 3,
+
+        // Play Store URL (Android)
+        "playStoreUrl": "market://details?id=com.jumble.boombox"
+    },
+
+    "boostPackageOffer":
+    {
+        // Is the feature enabled?
+        "enabled": false,
+
+        // Minimum player level before which the offer will not be shown
+        "minimumLevel": 5,
+
+        // Show the offer every X levels if the user has not watched an RV
+        "levelInterval": 5,
+
+        // Number of rewards awarded by the offer
+        "rewardAmount": 3
+    },
+
+    "beginnersBundle":
+    {
+        // How much time (in hours) the bunndle will be active
+        "limitedTime": 48,
+
+        // Minimum player level before which the beginners bundle will not be shown
+        "minimumLevel": 5
+    },
+	
+	// Crown Rush feature
+	"crownRush":
+	{
+		// Is Crown Rush feature enabled
+		"enabled": true,
+		
+		// The level in which the crown rush feature is unlocked
+		"unlockLevel": 25,
+		
+		// Crown rush prizes per level, the prizes are elements (items)
+		"prizes":
+		{
+			// Level 1 prize 
+			"crown1":
+			{
+				 // Amount of Lightning Bolts that will appear on board
+				"lightningBolt": 1,
+				
+				//Clock item, amount of clocks that will appear on board
+				"clock": 1
+			},
+			
+			// Level 2 prize 
+			"crown2":
+			{
+				// Amount of Lightning Bolts that will appear on board
+				"lightningBolt": 2,
+				
+				// Amount of clocks that will appear on board
+				"clock": 2
+			},
+			
+			// Level 3 prize 
+			"crown3":
+			{
+				// Amount of Lightning Bolts that will appear on board
+				"lightningBolt": 3,
+				
+				  // Amount of clocks that will appear on board
+				"clock": 3
+			}
+		}   
+	},
+
+    "gemChallenge":
+    {
+		// Is the feature enabled?
+        "enabled": true,
+
+        // Minimum player level before which the gems challenge will not be shown
+        "minimumLevel": 51,
+
+        // How much gems is needed to get the small chest reward
+        "smallChestGemsNeeded": 20,
+
+        // How much gems is needed to get the medium chest reward
+        "mediumChestGemsNeeded": 140,
+
+        // How much gems is needed to get the large chest reward
+        "largeChestGemsNeeded": 380,
+		
+		// Chance of a level having 0 gems (relative weight)
+		"gemCountWeight0": 0.2,
+		
+		// Chance of a level having 1 gem (relative weight)
+		"gemCountWeight1": 0.3,
+		
+		// Chance of a level having 2 gems (relative weight)
+		"gemCountWeight2": 0.25,
+		
+		// Chance of a level having 3 gems (relative weight)
+		"gemCountWeight3": 0.1,
+
+        // Chance of a level having 4 gems (relative weight)
+		"gemCountWeight4": 0.1,
+
+        // Chance of a level having 5 gems (relative weight)
+		"gemCountWeight5": 0.05
+    },
+	
+	"weeklyChallenge":
+    {
+		// Is the feature enabled?
+        "enabled": true,
+		
+        // Minimum player level before which the weekly challenge will not be shown
+        "minimumLevel": 11,
+
+		// Chance of a level having 0 items (relative weight)
+		"itemCountWeight0": 0.2,
+		
+		// Chance of a level having 1 items (relative weight)
+		"itemCountWeight1": 0.1,
+		
+		// Chance of a level having 2 items (relative weight)
+		"itemCountWeight2": 0.1,
+		
+		// Chance of a level having 3 items (relative weight)
+		"itemCountWeight3": 0.3,
+
+        // Chance of a level having 4 items (relative weight)
+		"itemCountWeight4": 0.2,
+
+        // Chance of a level having 5 items (relative weight)
+		"itemCountWeight5": 0.1,
+        
+        // Chance of a level having 6 items (relative weight)
+		"itemCountWeight6": 0
+    },
+
+    "coinChallenge":
+    {
+		// Is the feature enabled?
+        "enabled": true,
+
+		// Is the sale enabled?
+        "saleEnabled": false,
+		
+        // Minimum player level before which the seasonal events will not be shown
+        "minimumLevel": 51,
+
+		// Chance of a level having 0 items (relative weight)
+		"itemCountWeight0": 0.2,
+		
+		// Chance of a level having 1 items (relative weight)
+		"itemCountWeight1": 0.3,
+		
+		// Chance of a level having 2 items (relative weight)
+		"itemCountWeight2": 0.25,
+		
+		// Chance of a level having 3 items (relative weight)
+		"itemCountWeight3": 0.13,
+
+        // Chance of a level having 4 items (relative weight)
+		"itemCountWeight4": 0.07,
+
+        // Chance of a level having 5 items (relative weight)
+		"itemCountWeight5": 0.05,
+        
+        // Num of coins to collect for tier 1
+        "tier0GoalSize": 50,
+        
+        // Num of coins to collect for tier 2
+        "tier1GoalSize": 200,
+        
+        // Num of coins to collect for tier 3
+        "tier2GoalSize": 500
+    },
+
+    "inAppPurchaseOffer":
+    {
+        // Is the feature enabled?
+        "enabled": true,
+
+        // Minimum player level before which the offer will not be shown
+        "minimumLevel": 6,
+
+        // Show the offer every X levels
+        "levelInterval": 10
+    },
+	
+	"removeAdsOffer":
+	{
+		// Is the feature enabled? If true, the "Remove Ads" IAP button will appear on the Main Screen.
+        "enabled": true
+	},
+
+    "dailyBonus":
+    {
+        // Is the feature enabled?
+        "enabled": true,
+
+        // Minimum player level before which the daily bonus will not be shown
+        "minimumLevel": 12,
+
+        // Reset the consecutive day counter if player has missed a day?
+        "resetProgressOnMissedDays": true,
+        
+        // Is the feature shows only on store or in main?
+        "showInStorePanel": false
+    },
+	
+	"segmentation":
+	{
+		// Player's category (whale, dolphin etc.). This is provided externally by DeltaDNA remote config.
+		"playerCategory": "",
+		
+		"skill":
+		{
+			"phase1":
+			{
+				// The minimum level to start tracking the how long it takes the player to complete the level
+				"durationTrackingMinimumLevel": 2,
+				
+				// The maximum level to start tracking the how long it takes the player to complete the level
+				"durationTrackingMaximumLevel": 13,
+				
+				// Duration threshold for group 5 (in seconds)
+				"durationThresholdGroup5": 450,
+				
+				// Duration threshold for group 4 (in seconds)
+				"durationThresholdGroup4": 650,
+				
+				// Duration threshold for group 3 (in seconds)
+				"durationThresholdGroup3": 900,
+				
+				// Duration threshold for group 2 (in seconds)
+				"durationThresholdGroup2": 1200
+			},
+			
+			"phase2":
+			{
+				// The minimum level to start tracking the how long it takes the player to complete the level
+				"durationTrackingMinimumLevel": 50,
+				
+				// The maximum level to start tracking the how long it takes the player to complete the level
+				"durationTrackingMaximumLevel": 100,
+				
+				// The skill group for players with an average normalized duration under this threshold will be increased
+				"durationThresholdIncrease": 0.69,
+				
+				// The skill group for players with an average normalized duration over this threshold will be decreased
+				"durationThresholdDecrease": 0.85
+			}
+		}
+	},
+
+    "versionUpdate":
+    {
+        // Play Store URL (Android)
+        "playStoreUrl": "market://details?id=com.jumble.boombox",
+
+        // iTunes App Store URL (iOS)
+        "appStoreUrl": "https://itunes.apple.com/app/id1549518938",
+
+        // Minimum interval between suggested update requests (hours)
+        "suggestedRequestInterval": 720
+    },
+		
+	"starTournament":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the tournament feature
+		"minimumLevel": 30,
+		
+		// The utc hour of day that the tournament starts (0-23)
+		"startHour": 10,
+		
+		// time before tournament ends (hours)
+		"hoursBeforeEnd": 4,
+		
+		// Number of bots in the tournament
+		"botCount": 49,
+		
+		// Star base value per league
+		"leagueStars1": 18,
+		"leagueStars2": 29,
+		"leagueStars3": 44,
+		"leagueStars4": 73,
+		"leagueStars5": 129
+	},
+		
+	"teams":
+	{
+		// The minimum level to unlock the teams feature
+		"minimumLevel": 20,
+
+        // Create team price, in coins
+        "createTeamPrice": 50,
+
+        // Is the team recommendation active
+        "teamRecommendationEnabled": false
+	},
+		
+	"teamChest":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+
+		// The minimum level to unlock the team chest feature
+		"minimumLevel": 20,
+
+		// Chance of a level having 0 additional keys (relative weight)
+		"keysCountWeight0": 0.54,
+		
+		// Chance of a level having 1 additional keys (relative weight)
+		"keysCountWeight1": 0.36,
+		
+		// Chance of a level having 2 additional keys (relative weight)
+		"keysCountWeight2": 0.1
+	},
+
+	"teamBattle":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+
+		// The minimum level to unlock the feature
+		"minimumLevel": 23
+	},
+		
+	"endlessSale":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+
+		// The minimum level to unlock the feature
+		"minimumLevel": 61,
+        
+		// Is the alternative art enabled?
+        "alternativeArtEnabled": false
+	},
+		
+	"chainSale":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+
+		// The minimum level to unlock the feature
+		"minimumLevel": 61,
+
+		// The discount values to show to the user
+		"discountValues" : [0, 30, 40, 45],
+
+		// The link to use when sharing the final image
+		"shareLink" : "https://bmbx.games/Find"
+	},
+		
+	"pickOneSale":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+
+		// The minimum level to unlock the feature
+		"minimumLevel": 61
+	},
+		
+	"weeklySale":
+	{
+		// Is the feature enabled?
+        "enabled": false,
+
+		// The minimum level to unlock the feature
+		"minimumLevel": 41
+	},
+	
+	"seasonalEvents":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the seasonal sale
+		"saleMinimumLevel": 41
+	},
+
+    "cloudSave": 
+	{
+        // Is the feature enabled?
+        "enabled": true,
+		
+        // The minimum level to start saving data to cloud
+        "minLevelToSave": 10,
+
+        // The maximum session to restore the data
+        "maxSessionToRestore": 2,
+
+		// The minimum level to show your progress not saved popup
+		"inactivePopupMinLevel" : 30,
+
+		// Show the popup every X days
+		"inactivePopupDaysInterval" : 30,
+
+		// Link to FAQ how to activate cloud save
+		"inactivePopupFAQLink" : "https://support.boomboxgames.net/hc/en-us/articles/8804001649938-How-to-save-my-progress-with-Google-Games-"
+	},
+
+    "facebookLikeUs":
+    {
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// Minimum level for showing popup
+        "minimumLevel": 35,
+
+        // Show the offer every X levels if the user has not clicked like us yet
+        "levelInterval": 35,
+
+        // Game's Facebook homepage URL, use fb://profile prefix for IOS
+        "facebookPageUrl": "fb://profile/101512665851020"
+    },
+
+    // VIP players
+    "vip": 
+	{
+        // Is the feature enabled?
+        "enabled": true,
+
+        // Show VIP invitation popup
+        "showPopup": false,
+
+		// Show the popup every x days until the user confirm to sent support message
+        "popupDaysInterval": 7
+    },
+
+    "noLossRace":
+	{
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the no lose race 
+		"minimumLevel": 30,
+
+        // The utc hour of day that the event starts (0-23)
+		"startHour": 10,
+
+        // Number of wins to finish the race
+        "tiersTarget" : [3, 5, 10, 15, 20, 35, 50, 100, 125, 150],
+
+		// Multiple the bots's finish time on tier 1
+		"botsDurationMultiplierTier1" : 1.0,
+
+		// Multiple the bots's finish time on tier 2
+		"botsDurationMultiplierTier2" : 1.0,
+
+		// Multiple the bots's finish time on tier 3
+		"botsDurationMultiplierTier3" : 1.0,
+
+		// Multiple the bots's finish time on tier 4
+		"botsDurationMultiplierTier4" : 1.0,
+
+		// Multiple the bots's finish time on tier 5
+		"botsDurationMultiplierTier5" : 1.1,
+
+		// Multiple the bots's finish time on tier 6
+		"botsDurationMultiplierTier6" : 1.2,
+
+		// Multiple the bots's finish time on tier 7
+		"botsDurationMultiplierTier7" : 1.2,
+
+		// Multiple the bots's finish time on tier 8
+		"botsDurationMultiplierTier8" : 1.2,
+
+		// Multiple the bots's finish time on tier 9
+		"botsDurationMultiplierTier9" : 1.1,
+
+		// Multiple the bots's finish time on tier 10
+		"botsDurationMultiplierTier10" : 1.1,
+
+		// The Max tier we consider as final
+		"maxActiveTier" : 10
+    },
+
+    // Picture Event
+    "pictureEvent" : 
+	{
+        // Is the feature enabled?
+        "enabled": true,
+		
+		// Minimum level for unlock the feature
+        "minimumLevel": 100,
+		
+		// Minimum days for picture event to run (in case the user start in the middle of the event)
+		"daysForExtendedTime": 0,
+		
+		// Amount of days to extend the picture event only after paying
+		"daysAddedForBoughtExtendedTime": 0,
+		
+		// Amount of days to announce the user before the event is end - to extend the picture event only after paying
+		"daysAnnouncementBeforeEventEndsForBoughtExtendedTimeSale": 0,
+		
+		// Amount of days to announce the user after the event is end - to extend the picture event only after paying
+		"daysAnnouncementAfterEventEndsForBoughtExtendedTimeSale": 0,
+		
+		// Multiplier of target items count for main step 1 (base is 1.0)
+		"targetItemsCountMultiplier1": 1.0,
+		
+		// Multiplier of target items count for main step 2 (base is 1.0)
+		"targetItemsCountMultiplier2": 1.0,
+		
+		// Multiplier of target items count for main step 3 (base is 1.0)
+		"targetItemsCountMultiplier3": 1.0,
+		
+		// Multiplier of target items count for main step 4 (base is 1.0)
+		"targetItemsCountMultiplier4": 1.0,
+		
+		// Multiplier of target items count for main step 5 (base is 1.0)
+		"targetItemsCountMultiplier5": 1.0,
+		
+		// Used to manipulte target items from tier 3 to 5 on a test
+		"targetItemsManipulationEnabled": false
+    },
+
+    "decorationEvent" : 
+	{
+        // Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the feature
+        "minimumLevel": 101,
+		
+		// Multiplier of target items count for all steps (base is 1.0)
+		"targetItemsCountMultiplier": 1.0
+    },
+
+    // Invite Friends
+    "inviteFriends" : 
+	{
+		// Minimum level for unlock the feature
+        "minimumLevel": 999999999,
+
+		// Indicates for when to shows the popup per how much levels did the user complete 
+        "showPopupEachLevelsComplete": 50
+    },
+
+    "pearlChallenge" : 
+	{
+        // Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the feature
+        "minimumLevel": 80,
+		
+		// Chance of a level having 0 (relative weight)
+		"pearlCountWeight0": 0.05,
+		
+		// Chance of a level having 1 (relative weight)
+		"pearlCountWeight1": 0.3,
+		
+		// Chance of a level having 2 (relative weight)
+		"pearlCountWeight2": 0.25,
+		
+		// Chance of a level having 3 (relative weight)
+		"pearlCountWeight3": 0.2,
+
+        // Chance of a level having 4 (relative weight)
+		"pearlCountWeight4": 0.13,
+
+        // Chance of a level having 5 (relative weight)
+		"pearlCountWeight5": 0.07
+    },
+
+	"customEndlessSale" :
+	{
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the customEndlessSale
+		"minimumLevel": 61,
+
+		// The template num to use for which rewards and iaps to use
+		"template" : 0
+	},
+
+	// Birthday week
+	"birthdayWeek" :
+	{
+		// Is the feature enabled?
+        "enabled": true,
+		
+		// The minimum level to unlock the birthdayWeek
+		"minimumLevel": 61,
+
+		// The Date of the birthday, the birthday week will start 8 days before
+		"birthdayDate" : "05-01"
+	},
+
+	// Mini Games
+	"miniGames" :
+	{
+		// Is the feature enabled?
+        "enabled": false,
+		
+		// The minimum level to unlock the Mini Games
+		"minimumLevel": 3,
+		
+		// Level duration in seconds
+		"levelDuration": 90,
+
+		// Show timer low time effect x second before end 
+		"timeLowTimeWarningDuration": 10,
+
+		"activeLevelsSets":
+		{
+			"shelves" : "1"
+		}
+	}
+
+}

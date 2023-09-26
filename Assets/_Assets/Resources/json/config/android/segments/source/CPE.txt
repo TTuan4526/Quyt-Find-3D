@@ -1,0 +1,41 @@
+{
+    "game":
+    {
+		// Secondary multiplier for the total time for each level (base is 1.0)
+        "levelTimeMultiplier2": 1.0,
+		
+        // Revive settings
+        "revive":
+        {          
+            // Rewarded video minimum level
+            "rewardedVideoMinimumLevel": 999999
+        }
+	},
+  
+    "ads":
+    {   
+		"banners":
+        {
+            // Minimum level before which banners will not be shown
+            "minimumLevel": 3
+        },
+		
+		"interstitials":
+        {
+            // Minimum level before which interstitials will not be shown
+            "minimumLevel": 3
+		},
+	
+        "rewardedVideo":
+        {
+            // Does store rewarded video limit is enabled?
+            "limitRVStoreEnabled": true,
+
+            // Maximum times per a day that the user can watch rewarded video on store
+            "maximumRVStorePerDay": 10,
+
+            // Does store rewarded video is enabled?
+            "isRewardedStoreEnabled": true
+        }
+    }
+}

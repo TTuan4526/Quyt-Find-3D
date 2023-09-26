@@ -1,0 +1,59 @@
+{
+	"screens":
+	{
+		"splash":
+		{
+			"prefab": 	"Prefabs/UI/Screens/SplashScreen",
+			"create": 	"init",
+			"destroy":	"hide"
+		},
+
+		"mainScreen":
+		{
+			"prefab": 	"Prefabs/UI/Screens/MainScreen",
+			"create": 	"init",
+			"destroy":	"hide"
+		},
+
+		"pictureEventScreen":
+		{
+			"prefab": 	"Prefabs/UI/Screens/PictureEventScreen",
+			"create": 	"show",
+			"destroy":	"hide"
+		},
+
+		"decorationEventScreen":
+		{
+			"prefab": 	"Prefabs/UI/Screens/DecorationEventScreen",
+			"create": 	"show",
+			"destroy":	"hide"
+		},
+					
+		"game":
+		{		
+			"prefab": 	"Prefabs/UI/Screens/GameScreen",
+			"create": 	"init",
+			"destroy":	"never"
+		},
+
+		"noLossRace":
+		{		
+			"prefab": 	"Prefabs/UI/Screens/NoLossRaceScreen",
+			"create": 	"show",
+			"destroy":	"hide"
+		},	
+		
+		"levelEditor":
+		{		
+			"prefab": 	"Prefabs/UI/Screens/LevelEditorScreen",
+			"create": 	"show",
+			"destroy":	"hide"
+		},
+		"shelvesGame":
+		{		
+			"prefab": 	"Prefabs/UI/Screens/ShelvesMiniGameScreen",
+			"create": 	"show",
+			"destroy":	"hide"
+		}
+	}
+}
